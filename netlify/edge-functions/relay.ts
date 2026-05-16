@@ -58,7 +58,7 @@ function filterHeaders(src: Headers, strip?: RegExp): Headers {
 export default async function relay(request: Request, _context: Context) {
   const url = new URL(request.url);
 
-  if (!url.pathname.startsWith("/proxy/")) {
+  if (!url.pathname.startsWith("/download/")) {
     return new Response(FALLBACK_HTML, {
       status: 200,
       headers: {
